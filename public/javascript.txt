@@ -1,0 +1,14 @@
+document.getElementById('signup-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Check for CSCC email
+    if (!email.endsWith('@cscc.edu')) {
+        alert('Please use a valid CSCC email.');
+        return;
+    }
+
+    alert(`Account created for ${email}!`);
+    // In production, send data to the server here.
+});
